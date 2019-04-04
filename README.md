@@ -11,3 +11,4 @@ Repeat this until you have no more supporters.
 #### To-do:
 - [X] Add a multiplying factor that influences probability (e.g. 4 supporters will increase probability, no matter who they are
 - [ ] Add multiple scenarios that can play out, depending on the coup score.
+- [ ] Add a percentual modifier for each day a coup has been planned. Each day planned = 3% increase per person.
