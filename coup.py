@@ -39,7 +39,7 @@ while True:
     user_input = input("\nWhich positions are supporting the coup? (q to quit) ")
     user_input = user_input[0].upper() + user_input[1:]
     
-    if user_input != "q":
+    if user_input != "Q":
         if user_input in position_scores:
             add_to_score()
         else:
