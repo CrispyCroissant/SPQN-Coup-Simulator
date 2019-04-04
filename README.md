@@ -10,3 +10,4 @@ Repeat this until you have no more supporters.
 
 #### To-do:
 * Add a multiplying factor that influences probability (e.g. 4 supporters will increase probability, no matter who they are)
+* Add multiple scenarios that can play out, depending on the coup score.
