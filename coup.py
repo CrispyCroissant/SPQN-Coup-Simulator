@@ -4,7 +4,7 @@ The score range is (1,51)
 Max possible score == 43.
 Max possible percentage of winning == 43/50 == 86%
 """
-import random
+import random, time
 
 position_scores = {
     "Oberbefehl": 10,
@@ -32,7 +32,6 @@ def add_to_score():
     coup_score += position_scores[user_input]
     probab = coup_score / 50
     print(f"{user_input} was added.\n")
-    print(f"{probab * 100}% chance of successful coup.")
 
 
 # position loop
@@ -51,11 +50,17 @@ while True:
         break
 
 # add increased probability per member supporting the coup
-coup_score += len(positions_supporting_coup) * 1.2
-print(f"Probability of coup succeeding: {(coup_score / 50) * 100}")
+for x in positions_supporting_coup:
+    coup_score *= 1.13
+
+print(f"Probability of coup succeeding: {(coup_score / 50) * 100}%")
+print("Coup d'etat is underway...")
+time.sleep(10)
+print("All radio- and TV-channels have been changed to the emergency broadcast!\n")
+time.sleep(5)
 
 # simulator
 if random.randint(1, 51) < coup_score:
-    print("Coup is successful")
+    print("The Reichskonsuls have been captured, along with the supporters of the government. The coup has succeeded! ")
 else:
-    print("Coup has failed")
+    print("The coup members have been captured, along with their supporters, and are being escorted to prison. The coup has failed!")
