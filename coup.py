@@ -11,10 +11,10 @@ position_scores = {
     "Geheimpolizei": 9,
     "Reichsprotektor": 7,
     "Finansminister": 5,
-    "Diplomacyminister": 4,
+    "Diplomat": 4,
     "Sozialminister": 3,
     "Mfi": 3,
-    "Rustning": 2
+    "Rustningsminister": 2
 }
 
 coup_score = 0
@@ -63,4 +63,4 @@ time.sleep(5)
 if random.randint(1, 51) < coup_score:
     print("The Reichskonsuls have been captured, along with the supporters of the government. The coup has succeeded! ")
 else:
-    print("The coup members have been captured, along with their supporters, and are being escorted to prison. The coup has failed!")
+    print("The coup members have been captured along with their supporters, and are being escorted to prison. The coup has failed!")
