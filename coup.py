@@ -7,14 +7,14 @@ Max possible percentage of winning == 43/50 == 86%
 import random, time
 
 position_scores = {
-    "Oberbefehl": 10,
-    "Geheimpolizei": 9,
-    "Reichsprotektor": 7,
-    "Finansminister": 5,
-    "Diplomat": 4,
+    "Oberbefehl": 8,
+    "Geheimpolizei": 6,
+    "Reichsprotektor": 5,
+    "Finansminister": 4,
+    "Diplomat": 3,
     "Sozialminister": 3,
     "Mfi": 3,
-    "Rustningsminister": 2
+    "Rustningsminister": 1
 }
 
 coup_score = 0
@@ -51,7 +51,7 @@ while True:
 
 # add increased probability per member supporting the coup
 for x in positions_supporting_coup:
-    coup_score *= 1.13
+    coup_score *= 1.225
 
 print(f"Probability of coup succeeding: {(coup_score / 50) * 100}%")
 print("Coup d'etat is underway...")
@@ -64,3 +64,5 @@ if random.randint(1, 51) < coup_score:
     print("The Reichskonsuls have been captured, along with the supporters of the government. The coup has succeeded! ")
 else:
     print("The coup members have been captured along with their supporters, and are being escorted to prison. The coup has failed!")
+
+input()
